@@ -1,0 +1,20 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established openrouter entry for this base model.
+# Mammouth serves this as a distinct fast ID based on moonshotai/kimi-k3.
+schema = 2
+base_model = "moonshotai/kimi-k3"
+name = "Kimi K3 Fast"
+
+[capabilities]
+reasoning = { supported = true, effort = ["none", "low", "high", "max"] }
+
+[limit]
+output = 1_048_576
+
+[cost.text.input]
+price = 4.5
+cache = { read = 0.45 }
+
+[cost.text.output]
+price = 22.5

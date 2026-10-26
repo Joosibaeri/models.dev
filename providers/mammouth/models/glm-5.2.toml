@@ -1,0 +1,18 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established openrouter entry for this base model.
+schema = 2
+base_model = "zhipuai/glm-5.2"
+
+[capabilities]
+reasoning = { supported = true, effort = ["none", "high", "xhigh"] }
+
+[limit]
+context = 1_048_576
+
+[cost.text.input]
+price = 1.4
+cache = { read = 0.26 }
+
+[cost.text.output]
+price = 4.4

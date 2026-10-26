@@ -1,0 +1,28 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established openrouter entry for this base model.
+schema = 2
+base_model = "google/gemini-3.1-pro-preview-customtools"
+
+[capabilities]
+reasoning = { supported = true, effort = ["low", "medium", "high"] }
+
+[cost.text.input]
+price = 2
+cache = { read = 0.2, write = 0.375 }
+
+[[cost.text.input.overrides]]
+when = { context = { gt = 200_000 } }
+price = 4
+cache = { read = 0.4 }
+
+[cost.text.output]
+price = 12
+
+[[cost.text.output.overrides]]
+when = { context = { gt = 200_000 } }
+price = 18
+
+[cost.audio.input]
+price = 2
+cache = { read = 0.2 }

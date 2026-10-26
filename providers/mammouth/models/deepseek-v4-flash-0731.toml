@@ -1,0 +1,18 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established openrouter entry for this base model.
+schema = 2
+base_model = "deepseek/deepseek-v4-flash-0731"
+
+[capabilities]
+reasoning = { supported = true, effort = ["none", "low", "high", "max"] }
+
+[limit]
+context = 1_050_000
+
+[cost.text.input]
+price = 0.14
+cache = { read = 0.028 }
+
+[cost.text.output]
+price = 0.28

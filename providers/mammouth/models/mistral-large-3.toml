@@ -1,0 +1,14 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+schema = 2
+base_model = "mistral/mistral-large-2512"
+
+[limit]
+output = 209_715
+
+[cost.text.input]
+price = 0.5
+cache = { read = 0.05 }
+
+[cost.text.output]
+price = 1.5

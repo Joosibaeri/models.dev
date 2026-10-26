@@ -1,0 +1,17 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established openrouter entry for this base model.
+schema = 2
+base_model = "google/gemini-3.1-flash-image-preview"
+
+[capabilities]
+reasoning = { supported = true, effort = ["none", "minimal", "high"] }
+
+[cost.text.input]
+price = 0.5
+
+[cost.text.output]
+price = 3
+
+[cost.image.output]
+price = 60

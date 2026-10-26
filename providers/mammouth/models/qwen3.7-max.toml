@@ -1,0 +1,18 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established openrouter entry for this base model.
+schema = 2
+base_model = "alibaba/qwen3.7-max"
+
+[capabilities]
+reasoning = { supported = true, toggle = true }
+
+[limit]
+output = 65_500
+
+[cost.text.input]
+price = 2.5
+cache = { read = 0.25, write = 3.125 }
+
+[cost.text.output]
+price = 7.5

@@ -1,0 +1,18 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+# Reasoning controls mirror the established 302ai entry for this base model.
+schema = 2
+base_model = "openai/gpt-5.1-chat-latest"
+
+[capabilities]
+reasoning = { supported = true, effort = ["medium"] }
+
+[limit]
+context = 111_616
+
+[cost.text.input]
+price = 1.25
+cache = { read = 0.125 }
+
+[cost.text.output]
+price = 10

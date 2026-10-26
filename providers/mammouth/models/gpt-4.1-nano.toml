@@ -1,0 +1,11 @@
+# Source: https://api.mammouth.ai/public/model/info (accessed 2026-10-26).
+# Prices are USD per 1M tokens. Mammouth is a relay; model facts are inherited from the lab entry.
+schema = 2
+base_model = "openai/gpt-4.1-nano"
+
+[cost.text.input]
+price = 0.1
+cache = { read = 0.025 }
+
+[cost.text.output]
+price = 0.4
