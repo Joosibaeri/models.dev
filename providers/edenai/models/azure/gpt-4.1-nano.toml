@@ -1,5 +1,10 @@
 schema = 2
 base_model = "openai/gpt-4.1-nano"
+name = "GPT-4.1 nano (Azure)"
+
+[modalities]
+input = ["text", "image", "application/pdf"]
+output = ["text"]
 
 [capabilities]
 structured_output = true
